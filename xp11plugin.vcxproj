@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E7F7198D-DD05-46B1-8682-055B6CF80E02}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>xp11plugin</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <SourcePath>$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;XP11PLUGIN_EXPORTS;IBM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Dev\xplane_sdk-master\sdk\CHeaders\Widgets;C:\Dev\xplane_sdk-master\sdk\CHeaders\Wrappers;C:\Dev\xplane_sdk-master\sdk\CHeaders\XPLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Dev\xplane_sdk-master\sdk\Libraries\Win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>XPLM.lib;XPWidgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;XP11PLUGIN_EXPORTS;IBM;XPLM200;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Dev\xplane_sdk-master\curlcpp\include;C:\Dev\xplane_sdk-master\libcurl;C:\Dev\xplane_sdk-master\sdk\CHeaders\Widgets;C:\Dev\xplane_sdk-master\sdk\CHeaders\Wrappers;C:\Dev\xplane_sdk-master\sdk\CHeaders\XPLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Dev\xplane_sdk-master\sdk\Libraries\Win;C:\Dev\xplane_sdk-master\libcurl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>XPLM_64.lib;XPWidgets_64.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>G:\X-Plane 11\Resources\plugins\MyExample\64\win.xpl</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;XP11PLUGIN_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;XP11PLUGIN_EXPORTS;IBM;XPLM200;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Dev\xplane_sdk-master\curlcpp\include;C:\Dev\xplane_sdk-master\libcurl;C:\Dev\xplane_sdk-master\sdk\CHeaders\Widgets;C:\Dev\xplane_sdk-master\sdk\CHeaders\Wrappers;C:\Dev\xplane_sdk-master\sdk\CHeaders\XPLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Dev\xplane_sdk-master\sdk\Libraries\Win;C:\Dev\xplane_sdk-master\libcurl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OutputFile>G:\X-Plane 11\Resources\plugins\MyExample\64\win.xpl</OutputFile>
+      <AdditionalDependencies>XPLM_64.lib;XPWidgets_64.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="example\example_plugin.cpp" />
+    <ClCompile Include="sdk\CHeaders\Wrappers\XPCBroadcaster.cpp" />
+    <ClCompile Include="sdk\CHeaders\Wrappers\XPCDisplay.cpp" />
+    <ClCompile Include="sdk\CHeaders\Wrappers\XPCListener.cpp" />
+    <ClCompile Include="sdk\CHeaders\Wrappers\XPCProcessing.cpp" />
+    <ClCompile Include="sdk\CHeaders\Wrappers\XPCWidget.cpp" />
+    <ClCompile Include="sdk\CHeaders\Wrappers\XPCWidgetAttachments.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="sdk\Libraries\Win\XPLM_64.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="curlcpp\include\cookie.h" />
+    <ClInclude Include="curlcpp\include\cookie_date.h" />
+    <ClInclude Include="curlcpp\include\cookie_datetime.h" />
+    <ClInclude Include="curlcpp\include\cookie_time.h" />
+    <ClInclude Include="curlcpp\include\curl_config.h" />
+    <ClInclude Include="curlcpp\include\curl_cookie.h" />
+    <ClInclude Include="curlcpp\include\curl_easy.h" />
+    <ClInclude Include="curlcpp\include\curl_easy_info.h" />
+    <ClInclude Include="curlcpp\include\curl_exception.h" />
+    <ClInclude Include="curlcpp\include\curl_form.h" />
+    <ClInclude Include="curlcpp\include\curl_global.h" />
+    <ClInclude Include="curlcpp\include\curl_header.h" />
+    <ClInclude Include="curlcpp\include\curl_info.h" />
+    <ClInclude Include="curlcpp\include\curl_interface.h" />
+    <ClInclude Include="curlcpp\include\curl_ios.h" />
+    <ClInclude Include="curlcpp\include\curl_multi.h" />
+    <ClInclude Include="curlcpp\include\curl_option.h" />
+    <ClInclude Include="curlcpp\include\curl_pair.h" />
+    <ClInclude Include="curlcpp\include\curl_receiver.h" />
+    <ClInclude Include="curlcpp\include\curl_sender.h" />
+    <ClInclude Include="curlcpp\include\curl_share.h" />
+    <ClInclude Include="curlcpp\include\curl_utility.h" />
+    <ClInclude Include="sdk\CHeaders\Widgets\XPStandardWidgets.h" />
+    <ClInclude Include="sdk\CHeaders\Widgets\XPUIGraphics.h" />
+    <ClInclude Include="sdk\CHeaders\Widgets\XPWidgetDefs.h" />
+    <ClInclude Include="sdk\CHeaders\Widgets\XPWidgets.h" />
+    <ClInclude Include="sdk\CHeaders\Widgets\XPWidgetUtils.h" />
+    <ClInclude Include="sdk\CHeaders\Wrappers\XPCBroadcaster.h" />
+    <ClInclude Include="sdk\CHeaders\Wrappers\XPCDisplay.h" />
+    <ClInclude Include="sdk\CHeaders\Wrappers\XPCListener.h" />
+    <ClInclude Include="sdk\CHeaders\Wrappers\XPCProcessing.h" />
+    <ClInclude Include="sdk\CHeaders\Wrappers\XPCWidget.h" />
+    <ClInclude Include="sdk\CHeaders\Wrappers\XPCWidgetAttachments.h" />
+    <ClInclude Include="sdk\CHeaders\XPLM\XPLMCamera.h" />
+    <ClInclude Include="sdk\CHeaders\XPLM\XPLMDataAccess.h" />
+    <ClInclude Include="sdk\CHeaders\XPLM\XPLMDefs.h" />
+    <ClInclude Include="sdk\CHeaders\XPLM\XPLMDisplay.h" />
+    <ClInclude Include="sdk\CHeaders\XPLM\XPLMGraphics.h" />
+    <ClInclude Include="sdk\CHeaders\XPLM\XPLMMenus.h" />
+    <ClInclude Include="sdk\CHeaders\XPLM\XPLMNavigation.h" />
+    <ClInclude Include="sdk\CHeaders\XPLM\XPLMPlanes.h" />
+    <ClInclude Include="sdk\CHeaders\XPLM\XPLMPlugin.h" />
+    <ClInclude Include="sdk\CHeaders\XPLM\XPLMProcessing.h" />
+    <ClInclude Include="sdk\CHeaders\XPLM\XPLMScenery.h" />
+    <ClInclude Include="sdk\CHeaders\XPLM\XPLMUtilities.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
